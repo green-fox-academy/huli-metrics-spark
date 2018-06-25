@@ -17,18 +17,18 @@ You will need to ask for credentials at your DevOps team for security reasons.
 
 ### [Linux](https://docs.docker.com/install/linux/docker-ce/ubuntu/)
 
-# Clone the github repo
+## Clone the github repo
 
 https://github.com/green-fox-academy/huli-metrics-spark
 
-# Build docker image
+## Build docker image
 With "-t" you can tag your image for terminal access
 
 ```
 docker build . -t <yourImageName>
 ```
 
-# Enter into the container
+### Enter into the container
 You can enter immediately to the container and working with it
 With -v flag you can mount your working directory to share your proccess into the container
 
@@ -37,7 +37,7 @@ docker run -it -v ${PWD}/app:/home <yourImageName> bash
 ```
 You need to copy your python script into your "${PWD}/app" folder and it will be mounted in your container "/home" folder
 
-# Run your python script inside the container
+### Run your python script inside the container
 To start your job with spark simply run your script with spark-submit command in your container
 
 ```
@@ -54,16 +54,16 @@ docker pull greenfox/huli-metrics-spark:latest
 ```
 
 This image have extra jar files which is needed for MapD configuration.
-(You cannot download these jar files from Maven Central :'( )
+You cannot download these jar files from Maven Central :'(
 
-# Run the image 
+### Run the image 
 Everything is the same as we did it before
 
 ```
 docker run -it -v ${PWD}/app:/home greenfox/huli-metrics-spark bash
 ```
 
-### Description about example script for MapD
+## Description about example script for MapD
 
 You need to change for correct Public DNS address to reach MapD
 9091 port is the HTTP backend side of MapD which you need for writing data
