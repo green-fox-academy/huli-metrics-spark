@@ -3,8 +3,8 @@ environment for data mining
 
 ### Dear Huli Developer!
 
-This is a spark + hadoop environment for data mining jobs configured for s3 bucket reading.
-At the end you will find a Spark image which has an exmaple python script to write data to an already running MapD.
+This is a spark + hadoop environment for data mining jobs configured for s3 bucket reading.  
+At the end you will find a Spark image which has an exmaple python script to write data to an already running MapD.  
 You will need to ask for credentials at your DevOps team for security reasons.
 
 # First you need to install Docker, if you already have you can skip these steps
