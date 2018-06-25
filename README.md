@@ -29,7 +29,7 @@ docker build . -t <yourImageName>
 ```
 
 ### Enter into the container
-You can enter immediately to the container and working with it
+You can enter immediately to the container and working with it  
 With -v flag you can mount your working directory to share your proccess into the container
 
 ```
@@ -53,7 +53,7 @@ Download the image
 docker pull greenfox/huli-metrics-spark:latest
 ```
 
-This image have extra jar files which is needed for MapD configuration.
+This image have extra jar files which is needed for MapD configuration  
 You cannot download these jar files from Maven Central :'(
 
 ### Run the image 
@@ -65,14 +65,14 @@ docker run -it -v ${PWD}/app:/home greenfox/huli-metrics-spark bash
 
 ## Description about example script for MapD
 
-You need to change for correct Public DNS address to reach MapD
-9091 port is the HTTP backend side of MapD which you need for writing data
+You need to change for correct Public DNS address to reach MapD.  
+9091 port is the HTTP backend side of MapD which you need for writing data.
 
 ```
 url = 'jdbc:mapd:<MapD_Public_DNS>:9091:mapd'
 ```
 
-You can set your script to any S3 bucket from GreenFox to Read or Write 
+You can set your script to any S3 bucket from GreenFox to Read or Write.  
 Spark is able to read any files(.json, .txt, .parquet)...
 
 ```
