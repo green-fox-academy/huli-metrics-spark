@@ -68,20 +68,20 @@ docker run -it -v ${PWD}/app:/home greenfox/huli-metrics-spark bash
 You need to change for correct Public DNS address to reach MapD.  
 9091 port is the HTTP backend side of MapD which you need for writing data.
 
-```
+```python
 url = 'jdbc:mapd:<MapD_Public_DNS>:9091:mapd'
 ```
 
 You can set your script to any S3 bucket from GreenFox to Read or Write.  
 Spark is able to read any files(.json, .txt, .parquet)...
 
-```
+```python
 df = spark.read.json("s3a://Bucket-name/your-file.json")
 ```
 
 This piece of code shows json itself in your terminal
 
-```
+```python
 df.select(df['application'], df['some_date'], df['useful_data']).show()
          df.createOrReplaceTempView("huliExample")
 ```
